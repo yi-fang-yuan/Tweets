@@ -57,6 +57,16 @@
                 text-decoration: none;
                 text-transform: uppercase;
             }
+            .links-flex-center{
+                color: #636b6f;
+                padding: 0 25px;
+                font-size: 13px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+
+            }
 
             .m-b-md {
                 margin-bottom: 30px;
@@ -76,11 +86,18 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <div class="links">
+                            <a href="{{ route('login') }}">Login</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}">Register</a>
+                            @endif
+                        </div>
+                        <a href="/login/google">
+                            <img src="/image/google.png"
+                            >
+                        </a>
+
                     @endauth
                 </div>
             </div>

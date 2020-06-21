@@ -24,6 +24,10 @@ Route::middleware('auth')->group(function(){
 });
 Route::get('/profiles/{user:username}','ProfilesController@show')->name('profile');
 
+
+Route::get('login/google', 'Auth\LoginController@redirectToProvider');
+Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallback');
+
 Route::get('/explore','ExploreController@index');
 Auth::routes();
 
