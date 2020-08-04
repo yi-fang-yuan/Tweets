@@ -32,7 +32,12 @@ return [
     'google' => [
         'client_id' => '953949081611-mmd2mvb0pfhc3ukfmc2gmscn8lkigi23.apps.googleusercontent.com',
         'client_secret' => 'WXP-nO1mayB_NtYiAkGu4LpQ',
-        'redirect' => 'http://127.0.0.1:8000/login/google/callback',
+        'redirect' => 'http://tweeter.site/login/google/callback',
     ],
+    'facebook'=>[
+        'client_id' =>'294791935023705',
+        'client_secret'=>'20d6cc80b9fe4c4d574e4a799504ef54',
+        'redirect'=> 'http://tweeter.site/login/facebook/callback',
+    ]
 
 ];
